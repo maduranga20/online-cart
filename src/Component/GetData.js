@@ -4,31 +4,39 @@ import React, { Component } from 'react'
     constructor(props) {
         super(props);
         this.state = {
-          posts: [],
-         
+          get: [],
+          insert:"",
+          content:""
          };
-        //  this.getProductInformation = this.getProductInformation.bind(this);
+         this.InsertData = this.InsertData.bind(this);
         }  
         async componentDidMount() {
             const BASE_URL = "https://fakestoreapi.com/products?limit=5";
             const response = await fetch(BASE_URL);
             const data = await response.json();
-            this.setState({posts:data})
+            this.setState({get:data})
             
           }
        
-      
+          InsertData=(event)=>{
+            this.setState({insertValue:event.target.value})
+          }
           
   render() {
-    console.log(this.state.posts[0]);
+    
+
+    
     return (
+     
         <div>
-                
-        {this.state.posts.map((post) => (
-           <div className="post" key={post.id}>
-          <h3>{post.title}</h3>
+        <input type='text' onChange={InsertData}/>       
+         
+       
+        {this.state.get.map((item) => (
+           <div className="post" key={item.id}>
+          <h3>{item.title}</h3>
            <p></p>
-           <img src={post.image} alt='product'/>
+           <img src={item.image} alt='product'/>
           </div>
            ))}
           
