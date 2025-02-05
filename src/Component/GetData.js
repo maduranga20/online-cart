@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Button from  'react-bootstrap'
+import Button from  'react-bootstrap/Button'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 class AsyncData extends Component {
@@ -39,7 +40,7 @@ class AsyncData extends Component {
 
       <div>
         <input type='text' onChange={this.InsertData} />
-        <button onClick={this.SubmitData}>Search</button>
+        <Button onClick={this.SubmitData}>Search</Button>
 
 
         {selectPrice.map((item) => (
