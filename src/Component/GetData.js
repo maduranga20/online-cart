@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import {Button,Form,InputGroup} from  'react-bootstrap'
+import { Button, Form, InputGroup } from 'react-bootstrap'
 
 
 class AsyncData extends Component {
@@ -35,14 +35,23 @@ class AsyncData extends Component {
     const selectPrice = this.state.get.filter(item => item.price > parseContent);
     // console.log(selectPrice);
     console.log(this.state.get);
-
-
+//     <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
+//  placeholder="Username"
+//<input type='text' onChange={this.InsertData} />
     return (
 
       <div>
-        <input type='text' onChange={this.InsertData} />
-        <Button onClick={this.SubmitData}>Search</Button>
-
+      
+       
+        <InputGroup className="mb-3" style={{ width: '300px',}} onChange={this.InsertData}>
+         
+          <Form.Control
+           
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+          />
+           <Button onClick={this.SubmitData}>Search</Button>
+        </InputGroup>
 
         {selectPrice.map((item) => (
           <div className="post" key={item.id}>
@@ -55,6 +64,9 @@ class AsyncData extends Component {
       </div>
 
     )
+
+
+
   }
 }
 
