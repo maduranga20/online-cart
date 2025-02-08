@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import cart from './cart.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import { Button, Form, InputGroup } from 'react-bootstrap'
@@ -38,12 +39,13 @@ class AsyncData extends Component {
 //     <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
 //  placeholder="Username"
 //<input type='text' onChange={this.InsertData} />
+//style={{ width: '300px',}}
     return (
 
       <div>
       
        
-        <InputGroup className="mb-3" style={{ width: '300px',}} onChange={this.InsertData}>
+        <InputGroup className="mb-3"  onChange={this.InsertData}>
          
           <Form.Control
            
