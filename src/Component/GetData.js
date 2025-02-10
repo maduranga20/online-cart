@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
-import cart from './cart.css'
+
+import './cart.css'
+
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import { Button, Form, InputGroup } from 'react-bootstrap'
@@ -44,8 +47,8 @@ class AsyncData extends Component {
 
       <div>
       
-       
-        <InputGroup className="mb-3"  onChange={this.InsertData}>
+      <div className ="wrapper">
+        <InputGroup className="mb-3"  id="input" onChange={this.InsertData}>
          
           <Form.Control
            
@@ -54,7 +57,7 @@ class AsyncData extends Component {
           />
            <Button onClick={this.SubmitData}>Search</Button>
         </InputGroup>
-
+        </div>
         {selectPrice.map((item) => (
           <div className="post" key={item.id}>
             <h3>{item.title}</h3>
