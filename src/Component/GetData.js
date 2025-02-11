@@ -5,7 +5,7 @@ import './cart.css'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import { Button, Form, InputGroup } from 'react-bootstrap'
+import { Button, Form, InputGroup, Card } from 'react-bootstrap'
 
 
 class AsyncData extends Component {
@@ -39,32 +39,42 @@ class AsyncData extends Component {
     const selectPrice = this.state.get.filter(item => item.price > parseContent);
     // console.log(selectPrice);
     console.log(this.state.get);
-//     <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
-//  placeholder="Username"
-//<input type='text' onChange={this.InsertData} />
-//style={{ width: '300px',}}
+    //     <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
+    //  placeholder="Username"
+    //<input type='text' onChange={this.InsertData} />
+    //style={{ width: '300px',}}
     return (
 
       <div>
-      
-      <div className ="wrapper">
-        <InputGroup className="mb-3"  id="input" onChange={this.InsertData}>
-         
-          <Form.Control
-           
-            aria-label="Username"
-            aria-describedby="basic-addon1"
-          />
-           <Button onClick={this.SubmitData}>Search</Button>
-        </InputGroup>
-        </div>
-        {selectPrice.map((item) => (
-          <div className="post" key={item.id}>
-            <h3>{item.title}</h3>
 
-            <img src={item.image} alt='product' />
-          </div>
-        ))}
+        <div className="wrapper">
+          <InputGroup className="mb-3" id="input" onChange={this.InsertData}>
+
+            <Form.Control
+
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+            <Button onClick={this.SubmitData}>Search</Button>
+          </InputGroup>
+        </div>
+        <div className='row' style={{ marginTop: '4%', marginLeft: '2%' }}>
+          {selectPrice.map((item) => (
+            <div className='col-md-3' style={{ marginBottom: '4%' }}>
+              <Card style={{ width: '18rem', height: '65vh' }}>
+                <div className="post" key={item.id}>
+                  <Card.Body>
+                    <Card.Title>{item.title}</Card.Title>
+                  </Card.Body>
+
+
+                  <Card.Img style={{ height: '20vh' }} variant="top" src={item.image} alt='product' />
+                </div>
+              </Card>
+            </div>
+
+          ))}
+        </div>
 
       </div>
 
