@@ -69,7 +69,7 @@ class AsyncData extends Component {
 
 
                   <Card.Img style={{ height: 'auto',  width: '10em', objectFit: 'contain'}} variant="top" src={item.image} alt='product' />
-                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                 <div style={{ marginLeft: '9rem', marginTop: '30vh' }}> <i class="fa fa-shopping-cart" aria-hidden="true"></i></div> 
 
                 </div>
               </Card>
