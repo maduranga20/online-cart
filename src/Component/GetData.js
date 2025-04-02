@@ -48,7 +48,7 @@ class AsyncData extends Component {
       <div>
 
         <div className="wrapper">
-          <InputGroup className="mb-3" id="input" onChange={this.InsertData}>
+          <InputGroup className="mb-3 " id="input" onChange={this.InsertData}>
 
             <Form.Control
 
