@@ -35,10 +35,11 @@ class AsyncData extends Component {
 
 
   render() {
-    let parseContent = parseInt(this.state.content, 10);
-    const selectPrice = this.state.get.filter(item => item.price > parseContent);
+    // let parseContent = parseInt(this.state.content, 10);
+    const selectPrice = this.state.get.filter(item => item.category=="men's clothing");
     // console.log(selectPrice);
-    console.log(this.state.get);
+    // console.log(this.state.get[0]?.category);
+    console.log(selectPrice);
     //     <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
     //  placeholder="Username"
     //<input type='text' onChange={this.InsertData} />
