@@ -19,7 +19,7 @@ class AsyncData extends Component {
     this.InsertData = this.InsertData.bind(this);
   }
   async componentDidMount() {
-    const BASE_URL = "https://fakestoreapi.com/products?limit=10";
+    const BASE_URL = "https://fakestoreapi.com/products?limit=20";
     const response = await fetch(BASE_URL);
     const data = await response.json();
     this.setState({ get: data })
@@ -36,7 +36,7 @@ class AsyncData extends Component {
 
   render() {
     // let parseContent = parseInt(this.state.content, 10);
-    const selectPrice = this.state.get.filter(item => item.category=="men's clothing");
+    const selectPrice = this.state.get.map(item => item.title );
     // console.log(selectPrice);
     // console.log(this.state.get[0]?.category);
     console.log(selectPrice);
@@ -89,3 +89,5 @@ class AsyncData extends Component {
 }
 
 export default AsyncData;
+
+//https://fakestoreapi.com/products?limit=10
