@@ -36,10 +36,10 @@ class AsyncData extends Component {
 
   render() {
     // let parseContent = parseInt(this.state.content, 10);
-    const selectPrice = this.state.get.map(item => item.title );
+    const selectPrice = this.state.get.filter(item => item.title);
     // console.log(selectPrice);
     // console.log(this.state.get[0]?.category);
-    console.log(selectPrice);
+    console.log(selectPrice[0]?.title);
     //     <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
     //  placeholder="Username"
     //<input type='text' onChange={this.InsertData} />
@@ -62,15 +62,15 @@ class AsyncData extends Component {
         <div className='row' style={{ marginTop: '4%', marginLeft: '2%' }}>
           {selectPrice.map((item) => (
             <div className='col-md-3' style={{ marginBottom: '4%' }}>
-              <Card style={{ width: '18rem', height: '65vh' }}>
+              <Card style={{ width: '18rem', height: '25rem' }}>
                 <div className="post" key={item.id}>
                   <Card.Body>
                     <Card.Title>{item.title}</Card.Title>
                   </Card.Body>
 
-
+                 
                   <Card.Img style={{ height: 'auto',  width: '10em', objectFit: 'contain'}} variant="top" src={item.image} alt='product' />
-                 <div style={{ marginLeft: '9rem', marginTop: '30vh' }}> <i class="fa fa-shopping-cart" aria-hidden="true"></i></div> 
+                  <div style={{ marginLeft: '9rem', marginTop: '4rem' }}> <i class="fa fa-shopping-cart" aria-hidden="true"></i></div> 
 
                 </div>
               </Card>
