@@ -62,7 +62,7 @@ class AsyncData extends Component {
         <div className='row' style={{ marginTop: '4%', marginLeft: '2%' }}>
           {selectPrice.map((item) => (
             <div className='col-md-3' style={{ marginBottom: '4%' }}>
-              <Card style={{ width: '18rem', height: '25rem' }}>
+              <Card className='w-20'>
                 <div className="post" key={item.id}>
                   <Card.Body>
                     <Card.Title>{item.title}</Card.Title>
