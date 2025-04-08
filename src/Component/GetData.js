@@ -43,7 +43,8 @@ class AsyncData extends Component {
     //     <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
     //  placeholder="Username"
     //<input type='text' onChange={this.InsertData} />
-    //style={{ width: '300px',}}
+    //style={{ width: '300px',}}\
+    // style={{ marginBottom: '4%' }}
     return (
 
       <div>
@@ -61,17 +62,18 @@ class AsyncData extends Component {
         </div>
         <div className='row' style={{ marginTop: '4%', marginLeft: '2%' }}>
           {selectPrice.map((item) => (
-            <div className='col-md-3' style={{ marginBottom: '4%' }}>
-              <Card className='w-20'>
+            <div className='col-md-3 mb-4' >
+              <Card  style={{ height: '30rem',  width: 'auto'}}>
                 <div className="post" key={item.id}>
                   <Card.Body>
-                    <Card.Title>{item.title}</Card.Title>
+                    <Card.Title >{item.title}</Card.Title>
+                    <Card.Img style={{ height: 'auto',  width: '10em', objectFit: 'contain'}} variant="top" src={item.image} alt='product' />
+                  <div style={{ marginLeft: '9rem', marginTop: '4rem' }}> <i class="fa fa-shopping-cart" aria-hidden="true"></i></div> 
+
                   </Card.Body>
 
                  
-                  <Card.Img style={{ height: 'auto',  width: '10em', objectFit: 'contain'}} variant="top" src={item.image} alt='product' />
-                  <div style={{ marginLeft: '9rem', marginTop: '4rem' }}> <i class="fa fa-shopping-cart" aria-hidden="true"></i></div> 
-
+               
                 </div>
               </Card>
             </div>
