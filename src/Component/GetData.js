@@ -39,7 +39,7 @@ class AsyncData extends Component {
     const selectPrice = this.state.get.filter(item => item.title);
     // console.log(selectPrice);
     // console.log(this.state.get[0]?.category);
-    console.log(selectPrice[0]?.title);
+    console.log(selectPrice);
     //     <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
     //  placeholder="Username"
     //<input type='text' onChange={this.InsertData} />
